@@ -1,0 +1,64 @@
+#title {
+  font-size: 20;
+  font-family: System-Bold;
+  font-weight: regular;
+  text-length: 20;
+  text-anchor: middle;
+  fill: black;
+  x: 50%;
+  y: 25;
+}
+#err {
+  font-size: 40;
+  font-family: System-Regular;
+  font-weight: regular;
+  text-length: 20;
+  text-anchor: middle;
+  fill: black;
+  x: 50%;
+  y: 50%+10;
+}
+#copyright {
+  font-size: 18;
+  font-family: System-Regular;
+  font-weight: regular;
+  text-length: 20;
+  text-anchor: middle;
+  fill: black;
+  x: 50%;
+  y: 100%-10;
+}
+.nice-list-item {
+  height: 80;
+}
+.nice-list-header {
+  height: 40;
+}
+.nice-list-header text {
+  font-family: System-Regular;
+  text-anchor: start;
+  text-length: 12;
+  text-overflow: ellipsis;
+  font-size: 30;
+  fill: gray;
+  x: 5%;
+  y: 50%+13;
+}
+.nice-list-item text {
+  font-family: System-Regular;
+  text-anchor: start;
+  text-length: 24;
+  text-overflow: ellipsis;
+  font-size: 40;
+  fill: fb-white;
+  x: 5%;
+  y: 50%+13;
+  width: 95%;
+}
+.tile-divider-bottom {
+  x: 0;
+  y: 100%-1;
+  width: 100%;
+  height: 1;
+  fill: fb-extra-dark-gray;
+}
