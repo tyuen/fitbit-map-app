@@ -1,0 +1,92 @@
+<svg id="main">
+  <defs>
+    <symbol id="nice-list-item" href="#tile-list-item" pointer-events="none" system-events="all" focusable="false">
+      <rect id="button" width="100%" height="100%-1" pointer-events="all">
+        <animate attributeName="fill" begin="click" from="#999999" to="black" dur="1" final="restore" />
+      </rect>
+      <rect class="tile-divider-bottom" />
+    </symbol>
+    
+    <symbol id="settings-panel">
+      <svg y="100%" opacity="0">
+        <animate attributeName="opacity" begin="enable" from="0" to="1" dur="0.3" final="keep" easing="ease-in" />
+        <animate attributeName="opacity" begin="disable+0.1" from="1" to="0" dur="0.3" final="keep" easing="ease-in" />
+        <animate attributeName="y" begin="enable+0.1" from="100%" to="0" dur="0.3" final="keep" easing="ease-in" />
+        <animate attributeName="y" begin="disable+0.2" from="0" to="100%" dur="0.3" final="keep" easing="ease-in" />
+        <rect fill="black" width="100%" height="100%" />
+        <use id="settings-tiles" href="#tile-list">
+          <var id="reorder-enabled" value="0" />
+          <var id="align-mode" value="1" />
+          <use href="#tile-list-header" class="nice-list-header"></use>
+          <use href="#nice-list-item" id="map_std" class="nice-list-item"><text>Standard</text></use>
+          <use href="#nice-list-item" id="map_sat" class="nice-list-item"><text>Satellite</text></use>
+          <use href="#nice-list-item" id="map_hyb" class="nice-list-item"><text>Hybrid</text></use>
+          <use href="#tile-list-header" class="nice-list-header"><text>Latitude</text></use>
+          <use href="#nice-list-item" class="nice-list-item"><text id="lat">0.0</text></use>
+          <use href="#tile-list-header" class="nice-list-header"><text>Longitude</text></use>
+          <use href="#nice-list-item" class="nice-list-item"><text id="lon">0.0</text></use>
+          <use href="#tile-list-header" class="nice-list-header"></use>
+        </use>
+      </svg>
+    </symbol>
+
+    <symbol id="all-btns">
+      <svg fill="inherit" pointer-events="none">
+        <circle id="gps" cx="25" cy="25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
+        <image href="gps-btn.png" x="25" y="25" width="40" height="40" fill="inherit" />
+
+        <circle id="dots" cx="25" cy="100%-25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
+        <image href="dots-btn.png" x="25" y="100%-65" width="40" height="40" fill="inherit" />
+
+        <circle id="zoomin" cx="100%-25" cy="25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
+        <image href="zoom-in-btn.png" x="100%-65" y="25" width="40" height="40" fill="inherit" />
+
+        <circle id="zoomout" cx="100%-25" cy="100%-25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
+        <image href="zoom-out-btn.png" x="100%-65" y="100%-65" width="40" height="40" fill="inherit" />
+      </svg>
+    </symbol>
+  </defs>
+
+  <mask id="rounded">
+    <rect x="10" y="0" width="100%-20" height="100%" fill="#ffffff" />
+    <rect x="0" y="10" width="100%" height="100%-20" fill="#ffffff" />
+    <circle r="10" cx="100%-10" cy="100%-10" fill="#ffffff" />
+    <circle r="10" cx="10" cy="100%-10" fill="#ffffff" />
+    <circle r="10" cx="10" cy="10" fill="#ffffff" />
+    <circle r="10" cx="100%-10" cy="10" fill="#ffffff" />
+  </mask>
+  <svg mask="#rounded">
+    <image id="maptile0" href="blank.png" class="maptile" />
+    <image id="maptile1" href="blank.png" class="maptile" />
+    <image id="maptile2" href="blank.png" class="maptile" />
+    <image id="maptile3" href="blank.png" class="maptile" />
+    <image id="maptile4" href="blank.png" class="maptile" />
+    <image id="maptile5" href="blank.png" class="maptile" />
+    <image id="maptile6" href="blank.png" class="maptile" />
+    <image id="maptile7" href="blank.png" class="maptile" />
+    <image id="maptile8" href="blank.png" class="maptile" />
+  </svg>
+
+  <image id="crosshair" href="crosshair.png" class="color" x="50%-10" y="50%-10" width="19" height="19" />
+  
+  <text id="title" class="color" />
+  <text id="copyright" class="color" />
+  <rect id="touch" width="100%" height="100%" opacity="0" pointer-events="visible" />
+  <text id="err" class="color" pointer-events="visible" />
+
+  <use id="all-btns" href="#all-btns" fill="#333333" class="color" />
+  <use id="settings-panel" href="#settings-panel" />
+  
+</svg>
