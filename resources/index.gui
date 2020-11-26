@@ -30,22 +30,29 @@
 
     <symbol id="all-btns">
       <svg fill="inherit">
-        <use id="dots" href="#combo-button-lower-left" fill="inherit">
-          <set href="combo-button-icon" attributeName="href" to="dots-btn.png" />
-          <set href="combo-button-icon-press" attributeName="href" to="dots-btn.png" />
-        </use>
-        <use id="gps" href="#combo-button-upper-left" fill="inherit">
-          <set href="combo-button-icon" attributeName="href" to="gps-btn.png" />
-          <set href="combo-button-icon-press" attributeName="href" to="gps-btn.png" />
-        </use>
-        <use id="zoomin" href="#combo-button-upper-right" fill="inherit">
-          <set href="combo-button-icon" attributeName="href" to="zoom-in-btn.png" />
-          <set href="combo-button-icon-press" attributeName="href" to="zoom-in-btn.png" />
-        </use>
-        <use id="zoomout" href="#combo-button-lower-right" fill="inherit">
-          <set href="combo-button-icon" attributeName="href" to="zoom-out-btn.png" />
-          <set href="combo-button-icon-press" attributeName="href" to="zoom-out-btn.png" />
-        </use>
+        <image href="gps-btn.png" x="100%-68" y="68" width="40" height="40" href="inherit" />
+        <circle id="gps" cx="100%-25" cy="25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
+
+        <image href="dots-btn.png" x="100%-68" y="100%-68" width="40" height="40" href="inherit" />
+        <circle id="dots" cx="100%-25" cy="100%-25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
+
+        <image href="zoom-in-btn.png" x="100%-68" y="68" width="40" height="40" href="inherit" />
+        <circle id="zoomin" cx="100%-25" cy="25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
+
+        <image href="zoom-out-btn.png" x="100%-68" y="100%-68" width="40" height="40" href="inherit" />
+        <circle id="zoomout" cx="100%-25" cy="100%-25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+          <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
+          <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
+        </circle>
       </svg>
     </symbol>
   </defs>
