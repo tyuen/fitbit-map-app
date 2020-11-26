@@ -17,6 +17,7 @@
         <use id="settings-tiles" href="#tile-list">
           <var id="reorder-enabled" value="0" />
           <var id="align-mode" value="1" />
+          <use href="#tile-list-header" class="nice-list-header"></use>
           <use href="#nice-list-item" id="map_std" class="nice-list-item"><text>Standard</text></use>
           <use href="#nice-list-item" id="map_sat" class="nice-list-item"><text>Satellite</text></use>
           <use href="#nice-list-item" id="map_hyb" class="nice-list-item"><text>Hybrid</text></use>
@@ -24,35 +25,36 @@
           <use href="#nice-list-item" class="nice-list-item"><text id="lat">0.0</text></use>
           <use href="#tile-list-header" class="nice-list-header"><text>Longitude</text></use>
           <use href="#nice-list-item" class="nice-list-item"><text id="lon">0.0</text></use>
+          <use href="#tile-list-header" class="nice-list-header"></use>
         </use>
       </svg>
     </symbol>
 
     <symbol id="all-btns">
-      <svg fill="inherit">
-        <image href="gps-btn.png" x="100%-68" y="68" width="40" height="40" href="inherit" />
-        <circle id="gps" cx="100%-25" cy="25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+      <svg fill="inherit" pointer-events="none">
+        <circle id="gps" cx="25" cy="25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
           <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
           <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
         </circle>
+        <image href="gps-btn.png" x="25" y="25" width="40" height="40" fill="inherit" />
 
-        <image href="dots-btn.png" x="100%-68" y="100%-68" width="40" height="40" href="inherit" />
-        <circle id="dots" cx="100%-25" cy="100%-25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
+        <circle id="dots" cx="25" cy="100%-25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
           <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
           <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
         </circle>
+        <image href="dots-btn.png" x="25" y="100%-65" width="40" height="40" fill="inherit" />
 
-        <image href="zoom-in-btn.png" x="100%-68" y="68" width="40" height="40" href="inherit" />
         <circle id="zoomin" cx="100%-25" cy="25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
           <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
           <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
         </circle>
+        <image href="zoom-in-btn.png" x="100%-65" y="25" width="40" height="40" fill="inherit" />
 
-        <image href="zoom-out-btn.png" x="100%-68" y="100%-68" width="40" height="40" href="inherit" />
         <circle id="zoomout" cx="100%-25" cy="100%-25" r="60" fill="#ffffff" opacity="0" pointer-events="visible">
           <animate attributeName="opacity" begin="mousedown" from="0" to="0.5" dur="0" />
           <animate attributeName="opacity" begin="mouseup+0.1" from="0.5" to="0" dur="0" />
         </circle>
+        <image href="zoom-out-btn.png" x="100%-65" y="100%-65" width="40" height="40" fill="inherit" />
       </svg>
     </symbol>
   </defs>

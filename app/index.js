@@ -75,13 +75,13 @@ function init() {
   node.onmousemove = onMouseMove;
 
   node = $("all-btns");
-  $("zoomin", node).onactivate = onZoomIn;
-  $("zoomout", node).onactivate = onZoomOut;
-  $("gps", node).onactivate = () => {
+  $("zoomin", node).onclick = onZoomIn;
+  $("zoomout", node).onclick = onZoomOut;
+  $("gps", node).onclick = () => {
     peer.send({gps: 1});
     titleNode.text = "Acquiring...";
   };
-  $("dots", node).onactivate = () => {
+  $("dots", node).onclick = () => {
     openSettings = true;
     $("settings-panel").animate("enable");
     let {lat, lon} = getLatLon();
